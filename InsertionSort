@@ -1,0 +1,26 @@
+#include <bits/stdc++.h>
+using namespace std;
+void insertionSort1(int n, vector<int> arr) {
+    for(int i=1; i<n; i++){
+        int num = arr[i];
+        int j = i-1;
+        //Shift the Element 
+        while(j>-1 && arr[j]> num){
+            arr[j+1] = arr[j];
+            --j;
+            //Display the Process of sorting
+            for(int l=0; l<n; l++)
+                cout<<arr[l]<<" ";
+            cout<<"\n"; 
+        }
+        arr[j+1] = num;
+    }
+    for(int i=0; i<n; i++)
+            cout<<arr[i]<<" ";
+}
+
+int main(){
+  vector<int> arr = {2,4,2,1,5};
+  insertionSort1(5,arr)
+  return 0;
+}
