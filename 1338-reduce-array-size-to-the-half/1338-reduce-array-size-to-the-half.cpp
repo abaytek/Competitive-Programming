@@ -6,12 +6,12 @@ public:
         
         vector<int> frequency;
         for(auto it : mp) frequency.push_back(it.second);
-        sort(frequency.begin(), frequency.end(), greater<int>());
+        sort(frequency.begin(), frequency.end());
         
-        int count = 0, n = arr.size(), i = 0;
+        int count = 0, n = arr.size(), i = frequency.size()-1;
         
-        while(n > arr.size() / 2){ 
-            n -= frequency[i++];
+        while(n > arr.size() / 2 && i>=0){ 
+            n -= frequency[i--];
             count++;
         }
         return count;
