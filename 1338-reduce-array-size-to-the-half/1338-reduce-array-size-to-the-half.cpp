@@ -8,12 +8,12 @@ public:
         for(auto it : mp) frequency.push_back(it.second);
         sort(frequency.begin(), frequency.end(), greater<int>());
         
-        int ans = 0, n = arr.size(), idx = 0;
+        int count = 0, n = arr.size(), i = 0;
         
-        while(n > arr.size() / 2){
-            n -= frequency[idx++];
-            ans++;
+        while(n > arr.size() / 2){ 
+            n -= frequency[i++];
+            count++;
         }
-        return ans;
+        return count;
     }
 };
