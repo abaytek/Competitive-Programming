@@ -1,2 +1,2 @@
 # Competitive-Programming
-This Repo containing Solutions for competitive programming Questions (Practice)
+This Repo contains Solutions for programming Problems From A2SV PROGRESS SHEET (Practice)
